@@ -11,6 +11,24 @@ export default class Main extends Component {
 		loading: false, // desabilita o btn de add, enquanto tá carregando um repositório
 	};
 
+	// Carrega os dados do localStorage.
+	componentDidMount() {
+		const repositories = localStorage.getItem('repositories');
+
+		if (repositories) {
+			this.setState({ repositories: JSON.parse(repositories) });
+		}
+	}
+
+	// Salva os dados do localStorage.
+	componentDidUpdate(_, prevState) {
+		const { repositories } = this.state;
+
+		if (prevState.repositories !== repositories) {
+			localStorage.setItem('repositories', JSON.stringify(repositories));
+		}
+	}
+
 	handleInputChange = (e) => {
 		this.setState({ newRepo: e.target.value });
 	};
