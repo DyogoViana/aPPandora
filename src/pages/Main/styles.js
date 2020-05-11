@@ -69,3 +69,27 @@ export const SubmitButton = styled.button.attrs((props) => ({
 			}
 		`}
 `;
+
+// Lista dos repositórios.
+export const List = styled.ul`
+	list-style: 15px 0;
+	margin-top: 30px;
+
+	li {
+		padding: 15px 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		/* aplica em todos, exceto no primeiro. */
+		& + li {
+			border-top: 1px solid #eee;
+		}
+	}
+
+	a {
+		color: #7159c1;
+		text-decoration: none;
+	}
+`;
