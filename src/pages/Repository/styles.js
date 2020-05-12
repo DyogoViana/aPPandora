@@ -21,6 +21,10 @@ export const Owner = styled.header`
 		color: #7159c1;
 		font-size: 16px;
 		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	img {
@@ -81,19 +85,18 @@ export const IssueList = styled.ul`
 
 				&:hover {
 					color: #7159c1;
-					text-decoration: underline;
 				}
 			}
 
 			span {
-				background: #c27b6d;
-				color: #333;
+				background: #4fc296;
+				color: #fff;
 				border-radius: 2px;
 				font-size: 12px;
-				font-weight: 600;
+				font-weight: inherit;
 				height: 20px;
 				padding: 3px 4px;
-				margin-top: 10px;
+				margin-left: 10px;
 			}
 		}
 
